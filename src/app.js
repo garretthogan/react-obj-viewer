@@ -1,25 +1,10 @@
-class App {
-  constructor(node) {
-    this._el = node;
-    this._model = {
-      title: 'Hello world!',
-      description: 'This is a description...'
-    };
-  }
-  _getTemplate() {
-    const {title, description} = this._model;
-    return (`
-      <div>
-        <h1>${title}</h1>
-        <p>${description}</p>
-      </div>
-    `);
-  }
-  render() {
-    const {title} = this._model;
-    this._el.innerHTML = this._getTemplate();
+import React from 'react';
+import {render} from 'react-dom';
+
+class App extends React.Component {
+  render () {
+    return <p> Hello React!</p>;
   }
 }
 
-const app = new App(document.getElementById('app'));
-app.render();
+render(<App/>, document.getElementById('app'));
