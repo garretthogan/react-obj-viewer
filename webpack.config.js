@@ -10,7 +10,8 @@ module.exports = {
     filename: '[name].bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname),
+    contentBase: path.resolve(__dirname, 'dist'),
+    hot: true
   },
   module: {
     rules: [{
@@ -21,5 +22,6 @@ module.exports = {
         options: {presets: ['es2015']}
       }]
     }]
-  }
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };

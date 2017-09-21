@@ -1,12 +1,12 @@
 {
   "name": "frontend-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple starter app that includes webpack and webpack dev server out of the box.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Garrett Hogan",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
