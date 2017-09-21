@@ -1,7 +1,7 @@
 {
-  "name": "frontend-starter",
+  "name": "react-starter",
   "version": "1.0.0",
-  "description": "A simple starter app that includes webpack and webpack dev server out of the box.",
+  "description": "A simple react starter app that includes webpack and webpack dev server out of the box.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
