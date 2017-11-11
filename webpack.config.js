@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
@@ -23,5 +24,11 @@ module.exports = {
       }]
     }]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([
+      {from: __dirname + '/src/assets/meshes/', to: __dirname + '/dist/assets/meshes/'},
+      {from: __dirname + '/src/assets/materials/', to: __dirname + '/dist/assets/materials'}
+    ])
+  ]
 };
